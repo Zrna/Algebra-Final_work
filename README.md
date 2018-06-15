@@ -44,4 +44,4 @@ Course name: Web developer for user interface development / Web programer za raz
 
 The website is made for a fictional IT company.
 
-Created using: HTML5, SASS / SCSS, Bootstrap 4, JavaScript, jQuery / jQuery Validator, Gulp.js
+Created using: HTML5, SASS / SCSS, Bootstrap 4, JavaScript, jQuery / jQuery Validator, Gulp.js 
