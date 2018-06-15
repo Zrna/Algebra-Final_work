@@ -1,0 +1,395 @@
+﻿@import '_variables.scss';
+@import '_mixins.scss';
+
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 10px;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+section{
+    margin: 50px 0;
+}
+
+button{
+    outline: 0 !important;
+
+    &:hover, &:active, &:focus{
+        @include box-shadow(0 0 0 1px $main-color-rgba!important);
+    }
+
+    &.navbar-toggler{
+        border: none;
+
+        &:hover, &:active, &:focus{
+            @include box-shadow(none !important);
+        }
+    }
+}
+
+footer{
+    background: $dark-gray;
+    color: $light-gray;
+    text-align: center;
+    padding: 15px;
+
+    p{
+        margin-bottom: 0px;
+    }
+}
+
+a {
+    color: $main-color;
+    text-decoration: none;
+
+    &:hover, &:active, &:focus{
+        color: $main-color;
+        text-decoration: underline;
+    }
+}
+
+video {
+  width: 100%;
+  max-height: 100%;
+}
+
+.main-color{
+    color: $main-color;
+}
+
+.border-bottom{
+    border-bottom: 1px solid $main-color !important;
+}
+
+.footer-red-container{
+    margin: 0;
+    padding: 80px 20px;
+    background: $main-color;
+    color: $white-color;
+    text-align: center;
+}
+
+.btn-red-container {
+	background: transparent;
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid $white-color;
+    margin-top: 20px;
+    padding: 15px 25px;
+    cursor: pointer;
+	transform: translate(0%);
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    @include border-radius(0px);
+
+    &:hover{
+        color: $main-color;
+    }
+    
+    &:hover:before{
+        left: 0%;
+        right: auto;
+        width: 100%;
+    }
+
+    &:before{
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0;
+        background: $white-color;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+
+    &:focus{
+        @include box-shadow(0 0 0 1px $main-color-rgba);
+    }
+
+}
+
+
+
+/* NAVBAR STYLE 
+==================================================*/
+nav{
+    margin: auto;
+}
+
+.navbar-brand{
+    font-size: 28px;
+    @include text-shadow(2px 1px 5px $main-color-rgba);
+}
+
+
+
+/* INDEX.HTML STYLE
+==================================================*/
+
+.index-main{
+    margin: 0;
+    padding: 80px 20px;
+    background: $main-color;
+}
+
+.index-main-text{
+    max-width: 960px;
+    color: $white-color;
+    font-weight: 700;
+}
+
+.index-colab{
+    color: $dark-gray;
+    font-size: 22px;
+}
+
+.index-clients{
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+img.company-logo {
+    filter: grayscale(100%);
+    opacity: .8;
+    transition: all .2s;
+
+    &:hover{
+        filter: grayscale(0);
+         opacity: 1;
+    }
+}
+
+.index-success{
+    margin: 0;
+    padding: 50px 0;
+    background: #f5f5f5;
+}
+
+.index-success-exp{
+    margin: 20px 0;
+    text-align: center;
+
+}
+
+
+/* PROJECTS.HTML STYLE
+==================================================*/
+
+.projects-header{
+    color: $main-color;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+div.projects-div{
+    position: relative;
+}
+
+.projects-img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.projects-img-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: $black-color;
+    background-color: $main-color-rgba;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid $black-color;
+
+    p {
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+    }
+
+    a {
+        color: $black-color;
+    }
+}
+
+.projects-link{
+    opacity: .8;
+}
+
+#projects-show-video{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#projects-video{
+    display: none;
+}
+
+
+/* ABOUT-US.HTML STYLE
+==================================================*/
+
+.fa-map-marker{
+    color: $main-color;
+}
+
+iframe {
+    display: block;
+    border: none;
+    height: calc(100vh - 60vh);
+    width: 100%;
+}
+
+.show-team{
+    color: $main-color;
+    font-weight: 900;
+}
+
+ul#employees-section{
+    padding: 0;
+}
+
+li.person-box{
+    display: inline-block;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.employee-img{
+    width: 230px;
+    height: auto;
+}
+
+.show-team{
+    cursor: pointer;
+}
+
+#employees-section{
+    display: none;
+}
+
+.about-us-name{
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.about-us-work{
+    color: $light-gray;
+}
+
+
+/* CONTACT.HTML STYLE
+==================================================*/
+
+.form-control{
+    background-color: $form-input-color;
+
+    &:focus{
+        border-color: $main-color;
+        @include box-shadow(0 0 0 1px $main-color-rgba);
+
+    }
+}
+
+.ready-work{
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+.btn-send {
+    background: $main-color;
+    color: $white-color;
+    float: right;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px;
+    @include border-radius(5px);
+}
+
+.btn-reset {
+    background: $white-color;
+    color: $main-color;
+    border: 1px solid $main-color;
+    float: right;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin-right: 15px;
+    @include border-radius(5px);
+}
+
+label.error{
+    color: $main-color;
+    font-size: 13px;
+}
+
+.swal-footer{
+    border-top: 1px solid $light-gray;
+    margin-top: 40px;
+}
+
+.swal-button {
+    background-color: $green-color;
+    color: $white-color;
+    border: 1px solid $green-color;
+    @include border-radius(5px);
+    @include box-shadow(none!important);
+
+    &:active, &:hover, &:focus{
+        color: $green-color;
+        background: $white-color;
+        border: 1px solid $green-color;
+        @include box-shadow(none!important);
+    }
+}
+
+
+
+/* MEDIA QUERY
+==================================================*/
+
+@media screen and (max-width: 425px){
+    body{
+        margin: 0;
+    }
+
+    /* PROJECTS.HTML STYLE
+    ==================================================*/
+    .projects-img-text {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    /* ABOUT-US.HTML STYLE
+    ==================================================*/
+
+    ul#employees-section {
+        padding: 0;
+    }
+
+    li.person-box{
+        display:table;
+        margin:0px auto 0px auto;
+    }
+
+    
+}
