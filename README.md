@@ -40,7 +40,7 @@ Description
 ---
 Final work for [Algebra](https://www.algebra.hr/) Course.
 
-Course name: Web developer for user interface development / Web programer za razvoj korisnickog sucelja.
+Course name: Front-End Developer
 
 The website is made for a fictional IT company.
 
